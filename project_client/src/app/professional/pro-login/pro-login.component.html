@@ -1,0 +1,71 @@
+<app-pro-header></app-pro-header>
+
+<div class="row">
+    <div class="col-md-5 left-login">
+        <img id="userimage" src="https://www.nicepng.com/png/detail/264-2647723_our-team-consists-of-skilled-professionals-from-different.png" alt="">
+    </div>
+  
+    <div class="col-md-7 right-login">
+            <!-- temp -->
+            <section class="vh-100 gradient-custom">
+                <div class="container py-5 h-100">
+                  <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                      <div class="card bg-dark text-white" style="border-radius: 1rem;">
+                        <div class="card-body p-5 text-center logincard">
+              
+                          <div>
+                            <h5>Professional</h5>
+                            <h2 class="fw-bold text-uppercase">Login</h2>
+                            <p class="text-white-50">Please enter your credentials!</p>
+              
+                            <form [formGroup]="proLoginForm" (ngSubmit)="proLogin()">
+                            <div class="form-outline form-white">
+                              <input type="email" id="typeEmailX" class="form-control form-control-lg" formControlName="email" />
+                              <label class="form-label" for="typeEmailX">Email</label>
+                            </div>
+
+                            <div *ngIf="proLoginForm.get('email')?.invalid && proLoginForm.get('email')?.touched"
+                            class="text-danger">
+                            <ng-container *ngIf="proLoginForm.get('email')?.errors?.['required']">Email is required and must
+                              be a valid email address.</ng-container>
+                            <ng-container *ngIf="proLoginForm.get('email')?.errors?.['email']">Invalid email
+                              format.</ng-container>
+                          </div>
+              
+                            <div class="form-outline form-white">
+                              <input type="password" id="typePasswordX" class="form-control form-control-lg" formControlName="password" />
+                              <label class="form-label" for="typePasswordX">Password</label>
+                            </div>
+
+                            <div *ngIf="proLoginForm.get('password')?.invalid && proLoginForm.get('password')?.touched"
+                            class="text-danger">
+                            <ng-container *ngIf="proLoginForm.get('password')?.errors?.['required']">Password is
+                              required.</ng-container>
+                          </div>
+
+                            <span *ngIf="showMessage" style="color: greenyellow;">{{message}}</span>
+                            <span *ngIf="showMessage" style="color: red;">{{errorMessage}}</span>
+              
+                            <p class="small pb-lg-2"><a class="text-white-50" href="#!">Forgot password?</a></p>
+                            <p class="small pb-lg-2"><a class="text-white-50" routerLink="/verifyMail">Verify Mail?</a></p>
+              
+                            <button class="btn btn-outline-light btn-lg px-5" type="submit">Login</button>
+                            </form>
+              
+                          </div>
+              
+                          <div>
+                            <p class="mb-0">Don't have an account? <a routerLink="/professionalRegistration" class="text-white-50 fw-bold">Sign Up</a>
+                            </p>
+                          </div>
+              
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            <!-- temp -->    
+    </div>
+</div>

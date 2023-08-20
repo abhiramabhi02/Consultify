@@ -1,0 +1,27 @@
+<app-user-header></app-user-header>
+
+<section class="hero">
+    <div class="hero-content">
+      <h2>Get Expert Consultation for Your Needs</h2>
+      <p>Connect with top professionals in various industries for personalized consultations.</p>
+      <button type="button" (click)="scrollToNextDiv()" class="btn btn-light">Get Started</button>
+    </div>
+  </section>
+
+<div id="nextDiv" class="row">
+    <div class="col-md-6 col-sm-6 land-left">      
+        <div class="innerdiv1">
+           <a routerLink="userlogin" >
+            <h6 class="text-light pro-text1">Are you looking <br> for a professional</h6>
+        </a> 
+        </div>   
+    </div>
+    <div class="col-md-6 col-sm-6 land-right">
+      
+        <div class="innerdiv2">
+            <a routerLink="professionalLogin">
+                <h6 class="text-light pro-text2">Are you a Professional</h6>
+            </a>
+        </div>
+    </div>
+</div>

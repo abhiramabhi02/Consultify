@@ -1,0 +1,75 @@
+<app-user-header></app-user-header> <app-back-button></app-back-button>
+
+<!-- <div class="row">
+
+  <div class="col-md-6">
+    <p>Selected Day: {{ dayOfWeek }}</p>
+    <h5>{{PreferenceMessage}}</h5>
+    {{errorMessage}}
+  </div>
+  
+<div class="col-md-6 col-lg-6 col-xl-5 order-2 order-lg-6">
+  <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Schedule Appointment</p>
+  <form  class="mx-1 mx-md-4" [formGroup]="appointmentForm" (ngSubmit)="getData()">
+
+    <div class="d-flex flex-row align-items-center mb-4">
+      <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+      <div class="form-outline flex-fill mb-0">
+        <input type="date" id="form3Example3c" class="form-control" (change)="onDateChanged()" formControlName="date" />
+        <label class="form-label" for="form3Example3c">Date</label> 
+      </div>
+    </div>
+
+    <div class="d-flex flex-row align-items-center mb-4">
+      <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+      <div class="form-outline flex-fill mb-0">
+        <input type="time" id="form3Example4c" class="form-control" (change)="onDateChanged()" formControlName="time" />
+        <label class="form-label" for="form3Example4c">Time</label>
+      </div>
+    </div>
+
+    <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+      <button type="submit" class="btn btn-primary btn-lg">Confirm</button>
+    </div>
+  </form>
+
+ 
+</div>
+
+
+
+</div> -->
+
+
+
+<!-- latee -->
+
+<div class="container back">
+  <div class="row justify-content-center">
+    <div class="col-10 col-md-6">
+      <h4 class="text-center text-light mt-2">Schedule an Appointment</h4>
+      <form [formGroup]="appointmentForm" (ngSubmit)="getData()" class="needs-validation" novalidate>
+        <div class="form-group">
+          <label for="appointmentDate">Select Date:</label>
+          <input type="date" id="appointmentDate" formControlName="appointmentDate" (change)="onDateChange()" 
+           (change)="dayChange()"  [min]="today.toISOString().substring(0, 10)" [max]="currentWeekEnd.toISOString().substring(0, 10)"
+            class="form-control" required />
+          <div class="invalid-feedback">Please select a date.</div>
+        </div>
+        <div class="form-group">
+          <label for="timeSlot">Select Time Slot:</label>
+          <select id="timeSlot" formControlName="timeSlot" class="form-control" required>
+            <option value="" disabled selected>Select a time slot</option>
+            <option *ngFor="let slot of timeSlots" [value]="slot">{{ slot }}</option>
+          </select>
+          <div class="invalid-feedback">Please select a time slot.</div>
+        </div>
+        <div class="d-grid">
+          <button type="submit" class="btn btn-primary mt-3">Schedule Appointment</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+  

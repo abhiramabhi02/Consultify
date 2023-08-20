@@ -1,0 +1,52 @@
+<app-user-header></app-user-header>
+
+<app-back-button></app-back-button>
+
+         <div class="container-xl">
+            <div class="table-responsive">
+                <div class="table-wrapper">
+                    <div class="table-title">
+                        <div class="row">
+                            <div class="col-sm-5">
+                                <h2>Appointments</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Pro Name</th>						
+                                <th>Date</th>
+                                <th>Time</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let data of appointmentData; let i=index">
+                                <td>{{i}}</td>
+                                <td>{{data.professionalName}}</td>                       
+                                <td>{{data.Date}}</td>
+                                <td>{{data.Time}}</td>
+                                <td>{{data.Status}}</td>
+                                <td>
+                                  <div>
+                                    <button *ngIf="data.Status === 'Scheduled'" type="button" class="btn btn-secondary btn-sm" (click)='payment(data._id) '>Payment</button>
+                                    <a routerLink="/appointmentview/{{data._id}}"><button *ngIf="data.Status === 'Scheduled' || data.Status === 'Cancelled' || data.Status === 'Confirmed'" type="button" class="btn btn-dark btn-sm">view</button></a>
+                                </div>
+                                  
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                   
+                </div>
+            </div>
+        </div>  
+
+         <!-- temp -->
+
+        <!-- </div>
+    </div>
+</div> -->

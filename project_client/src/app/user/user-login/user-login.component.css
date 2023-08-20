@@ -1,0 +1,24 @@
+body{
+    margin: 0;
+   
+}
+#userimage{
+    margin-top: 5.5rem;
+    margin-left: 6rem;
+    width: 27rem;
+    height: 20rem;
+}
+.left-login{
+    background-color: #fff;
+    height: 31rem;
+}
+.right-login{
+    background-color:  #fff;
+    height: 31rem;
+}
+.logincard{
+    background-color: rgb(101 27 170);
+    border-radius: 2rem;
+    width: 23rem;
+    
+}

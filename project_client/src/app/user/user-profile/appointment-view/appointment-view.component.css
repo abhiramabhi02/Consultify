@@ -1,0 +1,10 @@
+#localVideoContainer, #remoteVideoContainer {
+  width: 35rem;
+  height: 20rem;
+  padding: 15px 5px 5px 5px;
+  border: 1px solid #000000;
+  margin-bottom: 10px;
+}
+.cont-bg{
+  background-color: #361a3e;
+}

@@ -1,0 +1,200 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+  }
+  
+  header {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    height: 30px;
+    margin-right: 10px;
+  }
+  
+  .nav-links li {
+    display: inline-block;
+    margin-left: 20px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #007bff;
+  }
+  
+  .login-signup a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  .hero {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 80px 0;
+  }
+  
+  .hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .hero h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  
+  .btn {
+    display: inline-block;
+    background-color: #fff;
+    color: #007bff;
+    border: none;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .services {
+    padding: 60px 0;
+    text-align: center;
+  }
+  
+  .services h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  
+  .service-card {
+    display: inline-block;
+    width: 300px;
+    padding: 20px;
+    margin: 0 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+  }
+  
+  .service-icon {
+    margin-bottom: 10px;
+  }
+  
+  .service-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .service-card p {
+    font-size: 14px;
+  }
+  
+  .consultants {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #f5f5f5;
+  }
+  
+  .consultants h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  
+  .consultant-card {
+    display: inline-block;
+    width: 200px;
+    padding: 20px;
+    margin: 0 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+  }
+  
+  .consultant-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .consultant-card h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .consultant-card p {
+    font-size: 14px;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .footer .logo img {
+    height: 20px;
+    margin-right: 10px;
+  }
+  
+  .footer-links li {
+    display: inline-block;
+    margin-left: 20px;
+  }
+  
+  .footer-links a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links a:hover {
+    color: #007bff;
+  }
+  a{
+    text-decoration: none;
+    color: black;
+  }

@@ -1,0 +1,40 @@
+/* Styling for the days container */
+div.days-container {
+    margin-bottom: 10px;
+  }
+  
+  /* Styling for each day label */
+  label {
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  /* Styling for each time slot container */
+  div.time-slot-container {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  /* Styling for the checkboxes */
+  input[type="checkbox"] {
+    margin-right: .5rem;
+  }
+  
+  /* Styling for the Save Preferences button */
+  button[type="submit"] {
+    background-color: #c351da;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Hover effect for the button */
+  button[type="submit"]:hover {
+    background-color:  rgb(101, 27, 170);
+  }
+  .back{
+    background-color: rgb(101, 27, 170);
+    border-radius: 4rem;
+    width: 40rem;
+  }

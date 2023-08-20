@@ -1,0 +1,16 @@
+<app-user-header></app-user-header>
+
+
+<div class="container">
+  <h5>Connect with your professional</h5>
+  <div class="row cont-bg">
+    <div class="col-md-5 mt-5" id="localVideoContainer"></div>
+    <div class="col-md-5 mt-5" id="remoteVideoContainer"></div>
+
+    <div>
+      <button (click)="joinChannel()" *ngIf="!inCall" class="btn btn-primary btn-sm">Join Channel</button>
+      <button (click)="leaveChannel()" *ngIf="inCall" class="btn btn-danger btn-sm ">Leave Channel</button>
+      <button (click)="toggleMute()" *ngIf="inCall" class="btn btn-secondary btn-sm">Mute</button>
+    </div>
+  </div>
+</div>

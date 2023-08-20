@@ -1,0 +1,49 @@
+<app-user-header></app-user-header>  <app-back-button></app-back-button>
+
+<div class="verify col-md-6">
+    
+    <div class="card text-center cardclr" [hidden]="otpDiv"  style="width: 20rem;">
+        <div class="card-header h5 text-white">Verify Mail</div>
+        <div class="card-body px-5">
+            <p class="card-text py-2 text-light">
+                Please enter your email to verify 
+            </p>
+            <form [formGroup]="forgotForm" (ngSubmit)="getEmail()" >
+            <div class="form-outline">
+                <input type="email" id="typeEmail" class="form-control my-3" formControlName="email" />
+                <label class="form-label text-light" for="typeEmail">Email input</label>
+            </div>
+    
+            
+            <button type="submit" class="btn btn-primary btn-sm text-light w-75" >Submit</button>
+        </form>
+        </div>
+    </div>
+    <div *ngIf="otpDiv" class="col-md-6">
+
+
+        <div class="card text-center cardclr" style="width: 20rem;">
+            <div class="card-header h5 text-white cardclr">OTP verification</div>
+            <div class="card-body px-5">
+                <p class="card-text py-2 text-white">
+                    Enter Otp
+                </p>
+                <form [formGroup]="otpForm" (ngSubmit)="getOtp()">
+                <div class="form-outline">
+                    <input type="number" id="typeEmail" class="form-control my-3" formControlName="otp" />
+                    <label class="form-label" for="typeEmail">OTP input</label>
+                </div>
+                <button type="submit" class="btn btn-primary text-light w-75">Verify</button>
+            </form>
+            </div>
+        </div>
+    </div>
+ 
+</div>
+
+
+
+
+<!-- otp -->
+
+

@@ -1,0 +1,46 @@
+<app-back-button></app-back-button>
+
+         <div class="container-xl">
+            <div class="table-responsive">
+                <div class="table-wrapper">
+                    <div class="table-title">
+                        <div class="row">
+                            <div class="col-sm-5">
+                                <h2>Appointment <b>Management</b></h2>
+                            </div>
+                        </div>
+                    </div>
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>User Name</th>						
+                                <th>Pro Name</th>
+                                <th>Date</th>
+                                <th>view Details</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let data of AppointmentData; let i=index">
+                                <td>{{i}}</td>
+                                <td>{{data.userName}}</td>                       
+                                <td>{{data.professionalName}}</td>
+                                <td>{{data.Status}}</td>
+                                <td>
+                                  <!-- <div *ngIf="data.Status === 'Active'"> <button (click)="confirmBlock(data._id)" class="btn btn-danger">block</button></div> -->
+                                  <!-- <div *ngIf="data.Status === 'Block'"> <button (click)="confirmUnblock(data._id)" class="btn btn-success">Unblock</button></div> -->
+                                  <div><a [routerLink]="['viewdetails', data._id]"><button type="button" class="btn btn-secondary">view</button></a></div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                   
+                </div>
+            </div>
+        </div>  
+
+         <!-- temp -->
+
+        <!-- </div>
+    </div>
+</div> -->

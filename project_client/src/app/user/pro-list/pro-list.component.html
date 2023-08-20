@@ -1,0 +1,16 @@
+<app-user-header></app-user-header> <app-back-button></app-back-button>
+
+
+<div class="row list-main">
+    <div class="card" *ngFor="let pro of professionals;">
+      <a routerLink="/proprofile/{{pro._id}}">
+        <img style="width: 8rem; height: 7rem;" src="https://img.freepik.com/premium-vector/doctor-icon-avatar-white_136162-58.jpg?w=2000" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{pro.Name}}</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+        </div>
+      </a>
+      </div>
+       
+</div>
